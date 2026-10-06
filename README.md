@@ -5,5 +5,6 @@ Flujo de trabajo del código:
 1. Carga y ajuste de tamaño: Lee la imagen de entrada y la escala proporcionalmente si supera el tamaño máximo configurado (TAMANO_MAXIMO = 900).
 2. Detección de bordes: Convierte la imagen a escala de grises, aplica un desenfoque Gaussiano para reducir el ruido y utiliza el algoritmo Canny con operaciones morfológicas para aislar las líneas principales.
 3. Extracción y simplificación de contornos: Encuentra los contornos, filtra los que son demasiado cortos (LARGO_MINIMO) y los simplifica mediante el algoritmo Douglas-Peucker (EPSILON) para reducirlos a puntos clave.
-4. Generación de archivos de salida:PNG: Crea una imagen de fondo blanco donde dibuja los puntos y las líneas que los conectan (opcionalmente puede numerar cada punto).
-5. SVG: Exporta las coordenadas obtenidas a un archivo de vectores escalable mediante etiquetas <polyline>.   
+4. Generación de archivos de salida:
+   4.1 PNG: Crea una imagen de fondo blanco donde dibuja los puntos y las líneas que los conectan (opcionalmente puede numerar cada punto).
+   4.2 SVG: Exporta las coordenadas obtenidas a un archivo de vectores escalable mediante etiquetas <polyline>.   
